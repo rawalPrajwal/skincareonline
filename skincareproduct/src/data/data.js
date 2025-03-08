@@ -2,7 +2,7 @@ const ProductList = [
   {
     id: 1,
     img: "https://images.mamaearth.in/catalog/product/r/i/rice-fw-1.jpg?format=auto&width=400&height=400",
-    rating: "4.5 / 25",
+    rating: "4.8 ★ / 5 (35)",
     title: "Hydrating Face Serum",
     product_volume: "30ml",
     price: "NPR 2,500",
@@ -11,7 +11,7 @@ const ProductList = [
   {
     id: 2,
     img: "https://images.mamaearth.in/catalog/product/r/i/rice-fw-1.jpg?format=auto&width=400&height=400",
-    rating: 4.2,
+    rating: "4.4 ★ / 5 (14)",
     title: "Vitamin C Brightening Cream",
     product_volume: "50g",
     price: "NPR 1,800",
@@ -20,7 +20,7 @@ const ProductList = [
   {
     id: 3,
     img: "https://images.mamaearth.in/catalog/product/r/i/rice-fw-1.jpg?format=auto&width=400&height=400",
-    rating: 4.8,
+    rating: "4.8 ★ / 5 (12)",
     title: "Aloe Vera Gel",
     product_volume: "100ml",
     price: "NPR 700",
@@ -29,7 +29,7 @@ const ProductList = [
   {
     id: 4,
     img: "https://images.mamaearth.in/catalog/product/r/i/rice-fw-1.jpg?format=auto&width=400&height=400",
-    rating: 4.1,
+    rating: "4.0 ★ / 5 (28)",
     title: "Sunscreen SPF 50",
     product_volume: "75ml",
     price: "NPR 1,500",
@@ -38,7 +38,7 @@ const ProductList = [
   {
     id: 5,
     img: "https://images.mamaearth.in/catalog/product/r/i/rice-fw-1.jpg?format=auto&width=400&height=400",
-    rating: 4.6,
+    rating: "4.3 ★ / 5 (49)",
     title: "Charcoal Face Wash",
     product_volume: "150ml",
     price: "NPR 850",
@@ -47,7 +47,7 @@ const ProductList = [
   {
     id: 6,
     img: "https://images.mamaearth.in/catalog/product/r/i/rice-fw-1.jpg?format=auto&width=400&height=400",
-    rating: 4.3,
+    rating: "4.8 ★ / 5 (13)",
     title: "Night Repair Cream",
     product_volume: "50g",
     price: "NPR 2,200",
@@ -56,7 +56,7 @@ const ProductList = [
   {
     id: 7,
     img: "https://images.mamaearth.in/catalog/product/r/i/rice-fw-1.jpg?format=auto&width=400&height=400",
-    rating: 4.7,
+    rating: "4.1 ★ / 5 (30)",
     title: "Hyaluronic Acid Moisturizer",
     product_volume: "60ml",
     price: "NPR 2,000",
@@ -65,7 +65,7 @@ const ProductList = [
   {
     id: 8,
     img: "https://images.mamaearth.in/catalog/product/r/i/rice-fw-1.jpg?format=auto&width=400&height=400",
-    rating: 4.0,
+    rating: "4.5 ★ / 5 (24)",
     title: "Rose Water Toner",
     product_volume: "120ml",
     price: "NPR 950",
@@ -74,7 +74,7 @@ const ProductList = [
   {
     id: 9,
     img: "https://images.mamaearth.in/catalog/product/r/i/rice-fw-1.jpg?format=auto&width=400&height=400",
-    rating: 4.9,
+    rating: "4.9 ★ / 5 (30)",
     title: "Anti-Aging Retinol Serum",
     product_volume: "30ml",
     price: "NPR 3,000",
@@ -83,7 +83,7 @@ const ProductList = [
   {
     id: 10,
     img: "https://images.mamaearth.in/catalog/product/r/i/rice-fw-1.jpg?format=auto&width=400&height=400",
-    rating: 4.4,
+    rating: "4.5 ★ / 5 (38)",
     title: "Exfoliating Face Scrub",
     product_volume: "100g",
     price: "NPR 1,200",

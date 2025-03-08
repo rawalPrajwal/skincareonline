@@ -71,8 +71,8 @@
   display: flex;
   align-items: center;
   gap: 0.5rem; /* 8px -> 0.5rem */
-  font-size: 1.125rem; /* 18px -> 1.125rem */
-  font-weight: bold;
+  font-size: 1rem; /* 18px -> 1.125rem */
+  font-weight: ;
   text-decoration: none;
   color: black; /* Fixed color */
   padding: 0.5rem 0.9375rem; /* 8px -> 0.5rem, 15px -> 0.9375rem */
@@ -113,11 +113,12 @@
   padding: 0;
 }
 .navList li{
-  font-size: 15.2PX;
+  font-size: 0.8rem;
   font-weight: 700;
   color: rgb(92, 92, 92);
   cursor: pointer;
   transition: color 0.3s;
+  text-transform: uppercase;
 }
 .navList li:hover{
   color: rgba(114, 99, 230, 1);

@@ -1,41 +1,113 @@
-/* SignUpForm.module.css */
+/* Container Styles */
 .container {
-  width: 400px;
-  margin: auto;
-  padding: 20px;
-  border: 1px solid #ddd;
+  width: 700px;
+  margin: 50px auto;
+  margin-top: 30px;
+  padding: 30px;
+  background: #fff;
   border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
   text-align: center;
 }
 
+/* Title */
+h2 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+/* Form Layout */
 .form {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 15px;
 }
 
+/* Row for first name & last name, email & mobile */
 .row {
   display: flex;
-  gap: 10px;
+  justify-content: space-between;
 }
 
+/* Input Container */
+.inputContainer {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  width: 48%; /* 48% width for two-column fields */
+}
+
+/* Full width for password fields */
+.fullWidth {
+  width: 100%;
+}
+
+/* Labels */
+label {
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+/* Input Fields */
 input {
   width: 100%;
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
+  font-size: 14px;
 }
 
+/* Password Container */
+.passwordContainer {
+  position: relative;
+  width: 100%;
+}
+
+/* Ensure password inputs have space for eye icon */
+.passwordContainer input {
+  padding-right: 40px;
+}
+
+/* Toggle Password Icon */
+.togglePassword {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #555;
+}
+
+/* Submit Button */
 .submitButton {
   width: 100%;
-  padding: 10px;
-  background-color: #000;
+  padding: 12px;
+  background: #0f172a;
   color: #fff;
   border: none;
-  border-radius: 5px;
+  border-radius: 15px;
+  font-size: 16px;
+  font-weight: bold;
   cursor: pointer;
+  transition: background 0.3s;
 }
 
 .submitButton:hover {
-  background-color: #333;
+  background: #2f3948;
+}
+
+/* Text Below Form */
+p {
+  margin-top: 15px;
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Login Link */
+.loginLink {
+  color: #555;
+  text-decoration: none;
+  font-weight: bold;
 }

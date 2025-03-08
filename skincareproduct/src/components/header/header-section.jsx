@@ -1,11 +1,16 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faShoppingBag, faUser } from "@fortawesome/free-solid-svg-icons";
+import {
+  faShoppingBag,
+  faShoppingCart,
+  faSignInAlt,
+  faUser,
+} from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
 // import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { useState } from "react";
 import styles from "./header.module.css";
 
-const Header = ({ setActive, handleActive }) => {
+const Header = ({ setActive, handleActive, count }) => {
   const [searchTerm, setSearchTerm] = useState("");
 
   return (
@@ -34,11 +39,12 @@ const Header = ({ setActive, handleActive }) => {
         {/* Cart & Login */}
         <div className={styles.right}>
           <Link to="/cart" className={styles.icon}>
-            <FontAwesomeIcon icon={faShoppingBag} />
+            <FontAwesomeIcon icon={faShoppingCart} />
             <span>Cart</span>
+            <span>{count}</span>
           </Link>
           <Link to={"/login"} className={styles.icon}>
-            <FontAwesomeIcon icon={faUser} />
+            <FontAwesomeIcon icon={faSignInAlt} />
             <span>Login</span>
           </Link>
         </div>
@@ -51,18 +57,24 @@ const Header = ({ setActive, handleActive }) => {
                 handleActive("skin");
               }}
             >
-              SKIN
+              Skin
             </li>
             <li
               onClick={() => {
-                handleActive("Hair");
+                handleActive("hair");
               }}
             >
-              HAIR
+              Hair
             </li>
-            <li>BABY</li>
-            <li>COMBO</li>
-            <li>NEW LAUNCHES</li>
+            <li
+              onClick={() => {
+                handleActive("baby");
+              }}
+            >
+              Baby
+            </li>
+            <li>Combo</li>
+            <li>New Launches</li>
           </ul>
         </div>
       </nav>

@@ -1,8 +1,15 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 .cartContainer {
+  margin: 0;
   max-width: 800px;
-  margin: auto;
   padding: 20px;
 }
+
 
 .cartTitle {
   text-align: center;
@@ -56,6 +63,7 @@
 }
 
 .removeBtn {
+  display: flex;
   background-color: #ff4d4d;
   color: white;
   border: none;
@@ -66,4 +74,29 @@
 
 .removeBtn:hover {
   background-color: #cc0000;
+}
+
+.quantityControls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.quantityBtn {
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.quantityBtn:hover {
+  background-color: #e0e0e0;
+}
+
+.quantity {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
 }

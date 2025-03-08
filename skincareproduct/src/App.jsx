@@ -4,7 +4,7 @@ import Header from "./components/header/header-section";
 import Cart from "./components/cart/cart";
 import { useEffect, useState } from "react";
 import { AuthRoutes } from "../../modules/auth/utils/route";
-import ProductList from "./components/displayCard/data";
+import ProductList from "./data/data";
 import ImageSlider from "./components/imgslider/imageSlider";
 import ImageCart from "./components/imagecart/imagecart";
 import Login from "../../modules/auth/login";
@@ -24,26 +24,49 @@ function App() {
       setCartAllProduct((prevCart) => [...prevCart, ...filteredObject]);
     }
   }, [productID]);
+  const [active, setActive] = useState("skin");
+
+  const handleActive = (active) => {
+    setActive(active);
+  };
+  const [count, setCount] = useState(0);
 
   return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<Home setProductId={setProductId} />} />
-        <Route path={"/login"} element={<Login />} />
-        <Route path={"/register"} element={<Register />} />
-        <Route
-          path="/cart"
-          element={
-            <Cart
-              cartAllProduct={cartAllProduct}
-              setCartAllProduct={setCartAllProduct}
-            />
-          }
+    <>
+      <Router>
+        <Header
+          setActive={setActive}
+          handleActive={handleActive}
+          count={count}
         />
-        {AuthRoutes}
-      </Routes>
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <Home
+                setProductId={setProductId}
+                active={active}
+                count={count}
+                setCount={setCount}
+              />
+            }
+          />
+          <Route path={"/login"} element={<Login />} />
+          <Route path={"/register"} element={<Register />} />
+          <Route
+            path="/cart"
+            element={
+              <Cart
+                cartAllProduct={cartAllProduct}
+                setCartAllProduct={setCartAllProduct}
+                setCount={setCount}
+              />
+            }
+          />
+          {AuthRoutes}
+        </Routes>
 
-      {/* <h1
+        {/* <h1
         style={{
           color: "black",
           fontSize: "24px",
@@ -54,7 +77,8 @@ function App() {
         Hair Care
       </h1>
       <Card setProductId={setProductId} /> */}
-    </Router>
+      </Router>
+    </>
   );
 }
 

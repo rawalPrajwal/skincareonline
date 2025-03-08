@@ -1,21 +1,27 @@
 import { useState } from "react";
 import styles from "./Card.module.css";
-import ProductList from "./data";
-import HairProduct from "./HairProduct";
+import ProductList from "../../data/data";
+import HairProduct from "../../data/HairProduct";
+import BabyProducts from "../../data/babyProduct";
 
-const Card = ({ active, addToCart, setProductId }) => {
+const Card = ({ active, addToCart, setProductId, setCount, count }) => {
   const [notification, setNotification] = useState("");
 
   let displayCard;
-  if (active == "skin") {
+  if (active === "skin") {
     displayCard = ProductList;
-  } else {
+  } else if (active === "hair") {
     displayCard = HairProduct;
+  } else {
+    displayCard = BabyProducts; // Make sure you are referencing the correct import here
   }
 
   const handleAddToCart = (product) => {
     setProductId(product.id);
-    addToCart(product); // Add product to cart
+
+    setCount((prev) => prev + 1);
+    console.log("added", count);
+    // addToCart(product); // Add product to cart
     setNotification(`${product.title} added to cart!`); // Show notification
 
     // Hide notification after 3 seconds

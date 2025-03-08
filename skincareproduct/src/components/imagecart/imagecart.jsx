@@ -1,27 +1,19 @@
-import styles from "./imagecart.module.css";
+// src/components/imagecart/imagecart.jsx
+import React from "react";
+import { imageCartData } from "../../data/imageCartData"; // Import image data
+import styles from "./imagecart.module.css"; // Your CSS module
+
 const ImageCart = () => {
   return (
     <div className={styles.imageCart}>
-      <img
-        src="https://jevee.s3.us-east-2.amazonaws.com/cms/featured-banner/153a2021-1c33-4e23-a0a7-6313d3e3517d.webp"
-        alt="Skin"
-        className={styles.imgCart}
-      />
-      <img
-        src="https://jevee.s3.us-east-2.amazonaws.com/cms/featured-banner/11199b44-3c08-4e8a-be1a-43153602670d.webp"
-        alt="Hair"
-        className={styles.imgCart}
-      />
-      <img
-        src="https://jevee.s3.us-east-2.amazonaws.com/cms/featured-banner/d971fc55-f756-442e-9f8d-67a7b3db7706.webp"
-        alt="Baby"
-        className={styles.imgCart}
-      />
-      <img
-        src="https://d2wfc4v12a2zxr.cloudfront.net/resized/medium/categories/combo-icon-1730283634.webp"
-        alt="Combo"
-        className={styles.imgCart}
-      />
+      {imageCartData.map((image, index) => (
+        <img
+          key={index} // Use the index as a key (or another unique identifier if available)
+          src={image.src}
+          alt={image.alt}
+          className={styles.imgCart} // Apply the styles to each image
+        />
+      ))}
     </div>
   );
 };
